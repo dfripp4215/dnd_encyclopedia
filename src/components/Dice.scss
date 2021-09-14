@@ -1,0 +1,66 @@
+.dice {
+    position: relative;
+    text-align: center;
+
+    img {
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    .dice-outcome {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .d4 {
+        top: 52%;
+    }
+
+    .d6 {
+        top: 50%;
+    }
+
+    .d8 {
+        top: 46%;
+    }
+
+    .d10 {
+        top: 50%;
+    }
+
+    .d12 {
+        top: 50%;
+    }
+
+    .d20 {
+        top: 50%;
+    }
+
+    .d100 {
+        top: 50%;
+    }
+}
+
+#dice-total {
+    font-size: 1.5em;
+}
+
+#dice-reset {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0.5em;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #4eb5f1;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#dice-reset:hover {
+    background-color:#4095c6;
+}
