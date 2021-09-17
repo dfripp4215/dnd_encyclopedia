@@ -1,0 +1,53 @@
+#spells-wrapper {
+    padding: 0em 2em;
+    max-width: 60em;
+
+    h2 {
+        margin-top: 1.2em;
+        border-bottom: 3px solid #e74c3c;
+        padding-bottom: .25em;
+        font-size: 1.6em;
+    }
+}
+
+#spells-list-container {
+    width: 100%;
+
+    table {
+        border-top: .5em solid rgb(227,73,57);
+        border-bottom: .5em solid rgb(227,73,57);
+        margin-top: 1em;
+        border-spacing: .5em;
+        border-collapse: collapse;
+        background-color: rgb(255, 255, 255);
+        font-size: 16px;
+
+        tr {
+            border-bottom: 1px solid black;
+        }
+
+        td {
+            vertical-align: top;
+        }
+
+        td, th {
+            padding: .5em;
+            text-align: left;
+        }
+
+        tbody {
+            overflow: auto;
+            max-height: 400px;
+        }
+    }
+
+    .spell-table-header {
+        padding: .5em;
+    }
+
+    .spell-item {
+        border-bottom: 1px solid #9f9f9f;
+    }    
+}
+
+
