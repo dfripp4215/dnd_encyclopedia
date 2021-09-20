@@ -14,7 +14,7 @@ function RenderSpellsList() {
             {spellListArr.map(spell => {
                 const { name, school, level, components, dnd_class } = spell
                 return (
-                    <tr className='spell-item'>
+                    <tr className='spell-item list-item'>
                         <td>{name}</td>
                         <td>{school}</td>
                         <td>{level.replace('-level', '')}</td>

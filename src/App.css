@@ -11,3 +11,7 @@ body {
 #main-content {
   display: flex;
 }
+
+#content-container {
+  width: 100%;
+}

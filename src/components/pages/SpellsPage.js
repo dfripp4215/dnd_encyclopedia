@@ -1,11 +1,11 @@
 import RenderSpellsList from './RenderSpellList'
-import './SpellsPage.scss'
+import './ListPages.scss'
 
 function Spells() {
         return (
-            <div id='spells-wrapper'>
-                <h2 id='spell-list-header'>Spell List</h2>
-                <div id='spells-list-container'>
+            <div id='table-wrapper'>
+                <h2 id='list-header'>Spell List</h2>
+                <div id='list-container'>
                     <table>
                         <thead>
                             <tr>

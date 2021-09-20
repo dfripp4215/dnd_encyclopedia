@@ -17,13 +17,21 @@ function QuickLinks() {
     return (
         <div id='links-container'>
             {linkNames.map((link, i) => {
-                // if statement to get rid of 'search' from the linkAndNames
+
+                let linkUpperCase = link.charAt(0).toUpperCase() + link.slice(1)
+
+                // This is to turn Magicitems into Magic-Items
+                if (i === 10) {
+                    linkUpperCase = linkUpperCase.substring(0, 5) + '-' + linkUpperCase.substring(5, linkUpperCase.length)
+                }
+
+                // if statement to get rid of 'search' and 'documents' from the linkAndNames
                 if (i !== linkNames.length - 1 && i !== 2) {
                     return (
                         <li key={link}>
                             <Link to={link}>
                                 <img src={linkImages[link]} alt={link} />
-                                {link}
+                                {linkUpperCase}
                             </Link>
                         </li>
                     )
@@ -31,7 +39,6 @@ function QuickLinks() {
             })}
         </div>
     )
-
 }
 
 export default QuickLinks

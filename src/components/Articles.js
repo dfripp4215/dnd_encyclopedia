@@ -1,10 +1,11 @@
 import QuickLinks from './QuickLinks'
 import { Switch, Route } from "react-router-dom"
 import SpellsPage from './pages/SpellsPage'
+import MonstersPage from './pages/MonstersPage'
 
 function Articles() {
     return (
-        <div className='main-content'>
+        <div id='content-container'>
             <Switch>
                 <Route exact path='/'>
                     <ul>
@@ -13,6 +14,9 @@ function Articles() {
                 </Route>
                 <Route path='/spells'>
                     <SpellsPage />
+                </Route>
+                <Route path='/monsters'>
+                    <MonstersPage />
                 </Route>
             </Switch>
         </div>
