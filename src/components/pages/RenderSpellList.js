@@ -3,11 +3,19 @@ import { useEffect, useState } from 'react'
 
 function RenderSpellsList() {
     const [spellListArr, setSpellListArr] = useState([])
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get('https://api.open5e.com/spells/')
-            .then(res => setSpellListArr(res.data.results))
+            .then(res => {
+                setSpellListArr(res.data.results)
+                setLoading(false)
+            })
     }, [])
+
+    if (isLoading) {
+        return <h1>Loading...</h1>
+    }
 
     return (
         < tbody >

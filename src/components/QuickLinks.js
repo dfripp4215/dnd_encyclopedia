@@ -6,11 +6,19 @@ import { useEffect, useState } from 'react'
 
 function QuickLinks() {
     const [directories, setDirectories] = useState({})
+    const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
         axios.get('https://api.open5e.com/')
-            .then(res => setDirectories(res.data))
+            .then(res => {
+                setDirectories(res.data)
+                setLoading(false)
+            })
     }, [])
+
+    if (isLoading) {
+        return <h2>Loading...</h2>
+    }
 
     let linkNames = Object.keys(directories)
 

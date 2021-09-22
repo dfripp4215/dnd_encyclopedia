@@ -6,6 +6,8 @@ body {
   background-color: rgb(209,192,167);
   margin: 0 auto;
   max-width: 900px;
+  padding-bottom: 20px;
+  font-size: 16px;
 }
 
 #main-content {

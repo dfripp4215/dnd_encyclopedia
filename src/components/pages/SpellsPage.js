@@ -9,11 +9,11 @@ function Spells() {
                     <table>
                         <thead>
                             <tr>
-                                <th className='spell-table-header'>Name</th>
-                                <th className='spell-table-header'>School</th>
-                                <th className='spell-table-header'>Level</th>
-                                <th className='spell-table-header'>Component</th>
-                                <th className='spell-table-header'>Class</th>
+                                <th className='table-header'>Name</th>
+                                <th className='table-header'>School</th>
+                                <th className='table-header'>Level</th>
+                                <th className='table-header'>Component</th>
+                                <th className='table-header'>Class</th>
                             </tr>
                         </thead>
                         <RenderSpellsList />
