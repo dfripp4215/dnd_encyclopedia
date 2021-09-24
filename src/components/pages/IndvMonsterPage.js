@@ -18,8 +18,6 @@ function IndvMonster() {
             })
     }, [monsterName])
 
-    console.log(monster)
-
     if (isLoading) {
         return <h2>Loading...</h2>
     }
@@ -153,6 +151,14 @@ function IndvMonster() {
         }
     }
 
+    const specialAbilitiesCheck = () => {
+        if (special_abilities) {
+            special_abilities.map(ability => {
+                return <p className='action'><span className='action-name'>{ability.name}.</span> {ability.desc}</p>
+            })
+        }
+    }
+
     return (
         <div id='backgrounds-container'>
             <h2>{name}</h2>
@@ -198,16 +204,14 @@ function IndvMonster() {
             <p><strong>Languages</strong> {languages}</p>
             <p><strong>Challenge</strong> {challenge_rating}</p>
             <hr />
-            {special_abilities.map(ability => {
-                return <p className='action'><span className='action-name'>{ability.name}.</span> {ability.desc}</p>
-            })}
+            {specialAbilitiesCheck()}
             <h2>Actions</h2>
             {actions.map(action => {
                 return <p className='action'><span className='action-name'>{action.name}.</span> {action.desc}</p>
             })}
             {legendaryActions()}
         </div>
-        
+
     )
 }
 

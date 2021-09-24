@@ -61,7 +61,6 @@ function Dice() {
                 return dice.reverse().join('')
             })
         )
-        console.log(diceTallyArr)
 
         return output
     }

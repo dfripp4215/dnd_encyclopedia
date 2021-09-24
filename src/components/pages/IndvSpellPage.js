@@ -16,8 +16,6 @@ function IndvSpell() {
             })
     }, [spellName])
 
-    console.log(spell)
-
     if (isLoading) {
         return <h2>Loading...</h2>
     }
