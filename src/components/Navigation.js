@@ -2,8 +2,15 @@ import SearchIcon from '@material-ui/icons/Search'
 import Logo from '../images/D20Logo.png'
 import './Navigation.scss'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Navigation() {
+    const [ search, setSearch ] = useState('')
+
+    const handleSearch = (event) => {
+        setSearch(`${event.target.value}`)
+    }
+
     return (
         <nav>
             <div id="logo">
@@ -14,8 +21,8 @@ function Navigation() {
             <div id='search-container'>
                 <h1>D&D Encyclopedia</h1>
                 <form action="" method="get">
-                    <input type="search" placeholder="What are you looking for?" id='search-input' />
-                    <button id="search-button"><SearchIcon /></button>
+                    <input type="search" placeholder="What are you looking for?" id='search-input' onChange={handleSearch}/>
+                    <Link to={`/search/${search}`} id="search-button"><SearchIcon /></Link>
                 </form>
             </div>
         </nav>

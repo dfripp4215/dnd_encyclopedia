@@ -5,11 +5,15 @@ import MonstersPage from './pages/MonstersPage'
 import Backgrounds from './pages/BackgroundsPage'
 import IndvMonster from './pages/IndvMonsterPage'
 import RenderIndvSpell from './pages/IndvSpellPage'
+import SearchList from './pages/SearchList'
 
 function MainPages() {
     return (
         <div id='content-container'>
             <Switch>
+                <Route path='/search/:search'>
+                    <SearchList />
+                </Route>
                 <Route exact path='/'>
                     <ul>
                         <QuickLinks />

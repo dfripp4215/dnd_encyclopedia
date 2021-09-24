@@ -6,8 +6,7 @@ function RenderMonstersList() {
     const [monsterListArr, setMonsterListArr] = useState([])
     const [isLoading, setLoading] = useState(true);
 
-    // TODO Add all pages to the monsterListArr. This has only 1 page, read the monsters docs for more info
-    // Promise.all research
+    // TODO: I just wanted to get this working, but I need to make seperate pages for each of these promises as this is way to long and takes to much time to wait for each one. Maybe 11 pages with 2 requests each.
     useEffect(() => {
         Promise.all([axios.get('https://api.open5e.com/monsters/'), axios.get('https://api.open5e.com/monsters/?page=2'), axios.get('https://api.open5e.com/monsters/?page=3'), axios.get('https://api.open5e.com/monsters/?page=4'), axios.get('https://api.open5e.com/monsters/?page=5'), axios.get('https://api.open5e.com/monsters/?page=6'), axios.get('https://api.open5e.com/monsters/?page=7'), axios.get('https://api.open5e.com/monsters/?page=8'), axios.get('https://api.open5e.com/monsters/?page=9'), axios.get('https://api.open5e.com/monsters/?page=10'), axios.get('https://api.open5e.com/monsters/?page=11'), axios.get('https://api.open5e.com/monsters/?page=12'), axios.get('https://api.open5e.com/monsters/?page=13'), axios.get('https://api.open5e.com/monsters/?page=14'), axios.get('https://api.open5e.com/monsters/?page=15'), axios.get('https://api.open5e.com/monsters/?page=16'), axios.get('https://api.open5e.com/monsters/?page=17'), axios.get('https://api.open5e.com/monsters/?page=18'), axios.get('https://api.open5e.com/monsters/?page=18'), axios.get('https://api.open5e.com/monsters/?page=20'), axios.get('https://api.open5e.com/monsters/?page=21'), axios.get('https://api.open5e.com/monsters/?page=22')])
             .then(([p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22]) => {
