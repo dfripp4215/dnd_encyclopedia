@@ -1,4 +1,4 @@
-import RenderMonsterList from './RenderMonstersList'
+import RenderMonsterList from './MonstersList'
 import './ListPages.scss'
 
 function Monsters() {
@@ -16,7 +16,7 @@ function Monsters() {
                                 <th className='table-header'>HP</th>
                             </tr>
                         </thead>
-                        <RenderMonsterList />
+                        <RenderMonsterList/>
                     </table>
                 </div>
             </div>

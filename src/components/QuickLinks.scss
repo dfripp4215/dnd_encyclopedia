@@ -9,6 +9,35 @@
     }
 
     li {
+        padding: 0.3em;
         list-style-type: none
     }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(227, 66, 49);
+        font-size: 1.1em;
+        font-weight: 1000;
+    }
+}
+
+li:hover {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation-name: pop;
+    animation-duration: 0.1s;
+    border-left: 0.4em solid rgb(251,88,70);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@keyframes pop {
+    0%   {border-left: 2px solid #f9b2b2;}
+    25%  {border-left: 3px solid #fa8c8c;}
+    50%  {border-left: 4px solid #ff8080;}
+    75%  {border-left: 4px solid #fe6767;}
+    100% {border-left: 5px solid rgb(251,88,70);}
 }

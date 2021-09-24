@@ -6,7 +6,7 @@ import './IndvMonsterPage.scss'
 
 function IndvMonster() {
     let monsterNameObj = useParams()
-    let monsterName = monsterNameObj.id
+    let monsterName = monsterNameObj.monster
     const [monster, setMonster] = useState({})
     const [isLoading, setLoading] = useState(true);
 
@@ -87,24 +87,7 @@ function IndvMonster() {
     }
 
     const calcAbilityMult = (abilityScore) => {
-        let multiplier = 0
-
-        abilityScore === 1 ? multiplier = -5
-            : abilityScore === 2 || abilityScore === 3 ? multiplier = -4
-                : abilityScore === 4 || abilityScore === 5 ? multiplier = -3
-                    : abilityScore === 6 || abilityScore === 7 ? multiplier = -2
-                        : abilityScore === 8 || abilityScore === 9 ? multiplier = -1
-                            : abilityScore === 10 || abilityScore === 11 ? multiplier = 0
-                                : abilityScore === 12 || abilityScore === 13 ? multiplier = 1
-                                    : abilityScore === 14 || abilityScore === 15 ? multiplier = 2
-                                        : abilityScore === 16 || abilityScore === 17 ? multiplier = 3
-                                            : abilityScore === 18 || abilityScore === 19 ? multiplier = 4
-                                                : abilityScore === 20 || abilityScore === 21 ? multiplier = 5
-                                                    : abilityScore === 22 || abilityScore === 23 ? multiplier = 6
-                                                        : abilityScore === 24 || abilityScore === 25 ? multiplier = 7
-                                                            : abilityScore === 26 || abilityScore === 27 ? multiplier = 8
-                                                                : abilityScore === 28 || abilityScore === 29 ? multiplier = 9
-                                                                    : multiplier = 10
+        let multiplier = Math.floor(abilityScore / 2) - 5
 
         if (multiplier >= 0) {
             return `(+${multiplier})`
@@ -224,6 +207,7 @@ function IndvMonster() {
             })}
             {legendaryActions()}
         </div>
+        
     )
 }
 

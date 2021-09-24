@@ -1,11 +1,12 @@
 import QuickLinks from './QuickLinks'
 import { Switch, Route } from "react-router-dom"
 import SpellsPage from './pages/SpellsPage'
-import MonstersPage from './pages/MonstersListPage'
+import MonstersPage from './pages/MonstersPage'
 import Backgrounds from './pages/BackgroundsPage'
-import RenderIndvMonster from './pages/IndvMonsterPage'
+import IndvMonster from './pages/IndvMonsterPage'
+import RenderIndvSpell from './pages/IndvSpellPage'
 
-function Articles() {
+function MainPages() {
     return (
         <div id='content-container'>
             <Switch>
@@ -14,14 +15,18 @@ function Articles() {
                         <QuickLinks />
                     </ul>
                 </Route>
+                <Route path='/spells/:spell' >
+                    <RenderIndvSpell />
+                </Route>
                 <Route path='/spells'>
                     <SpellsPage />
+                </Route>
+                <Route path='/monsters/:monster'>
+                    <IndvMonster />
                 </Route>
                 <Route path='/monsters'>
                     <MonstersPage />
                 </Route>
-                
-
                 <Route path='/backgrounds'>
                     <Backgrounds />
                 </Route>
@@ -49,10 +54,9 @@ function Articles() {
                 <Route path='/weapons'>
                     <h2>Coming Soon!</h2>
                 </Route>
-                <Route path='/:id' children={<RenderIndvMonster />} />
             </Switch>
         </div>
     )
 }
 
-export default Articles
+export default MainPages

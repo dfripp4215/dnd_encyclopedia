@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function RenderSpellsList() {
     const [spellListArr, setSpellListArr] = useState([])
@@ -23,7 +24,7 @@ function RenderSpellsList() {
                 const { name, school, level, components, dnd_class } = spell
                 return (
                     <tr className='spell-item list-item'>
-                        <td>{name}</td>
+                        <td><Link to={`/spells/${name}`}>{name}</Link></td>
                         <td>{school}</td>
                         <td>{level.replace('-level', '')}</td>
                         <td>{components}</td>
