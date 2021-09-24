@@ -1,6 +1,6 @@
 # Welcome to the D&D Encyclopedia
 
-![Website Screenshot](./components/images/V2Screenshot.jpg?raw=true "Website Screenshot")
+![Website Screenshot](./src/images/V2Screenshot.jpg?raw=true "Website Screenshot")
 
 This website was created on react.js to be the complete Encyclopedia of Dungeons and Dragons! 
 
@@ -39,7 +39,7 @@ https://young-citadel-44054.herokuapp.com/
 
 I like to start by creating the basic layout of how I want the website to look - this let me get a feel of what I am about to create. 
 
-![Home Page Blocked](./components/images/HomePageBlocked.jpg?raw=true "Home Page Layout")
+![Home Page Blocked](/src/images/HomePageBlocked.jpg?raw=true "Home Page Layout")
 
 I then brainstormed what technologies I'd need to complete the work as well as the Route scructure I wanted.
 
