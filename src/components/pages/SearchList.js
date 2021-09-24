@@ -22,8 +22,6 @@ function SearchList() {
         return <h1>Loading...</h1>
     }
 
-    console.log(searchList)
-
     const makeHTML = (html) => {
         let tmp = document.createElement("DIV");
         tmp.innerHTML = html;
