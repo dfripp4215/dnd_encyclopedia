@@ -22,6 +22,10 @@ function SearchList() {
         return <h1>Loading...</h1>
     }
 
+    if (searchList.length === 0) {
+        return <h2>Sorry, Nothing was found.</h2>
+    }
+
     const makeHTML = (html) => {
         let tmp = document.createElement("DIV");
         tmp.innerHTML = html;

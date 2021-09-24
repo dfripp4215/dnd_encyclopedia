@@ -49,7 +49,6 @@ function IndvMonster() {
         special_abilities,
         actions,
         legendary_actions,
-        reactions,
         size,
         type,
         damage_immunities,
