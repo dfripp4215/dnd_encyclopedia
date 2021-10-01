@@ -61,6 +61,7 @@ Along the way I'd descover new ways of structuring my code, and incorporated tha
 * Fall damage calculator, jump distance calculator.
 * Incorporate a Map Creater where you can Create, share and 'live-edit' D&D Maps.
 * Planes, Sections, Feats, Conditions, Races, Classes, Magic-Items, and Weapons incorporated from API.
+* Add "On this page" side bar for backgrounds, classes Ect.
 * CSS improvements.
 
 ## Major Hurdles
